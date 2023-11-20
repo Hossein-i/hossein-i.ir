@@ -14,10 +14,10 @@ const HeroHeaderLayout: FunctionComponent<HeroHeaderLayoutProps> = () => {
             <Image src="/profile.jpg" alt="" width={175} height={175} />
           </div>
           <div className="grid gap-4">
-            <h1 className="text-3xl font-bold">👋🏻 Hey, I'm Hossein</h1>
+            <h1 className="text-3xl font-bold">👋🏻 Hey, I’m Hossein</h1>
             <p className="text-gray-500">
-              Welcome to my website. I'm web developer from Iran. And here, I
-              share what I've been working on recently and things I learned
+              Welcome to my website. I’m web developer from Iran. And here, I
+              share what I’ve been working on recently and things I learned
               along the way.
             </p>
 
