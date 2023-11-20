@@ -1,31 +1,19 @@
-"use client";
-
-import { signIn, signOut, useSession } from "next-auth/react";
-import Image from "next/image";
+import { getNotes, getProjects } from "@/lib/docs";
+import HeroHeaderLayout from "./_layouts/hero-header";
+import RecentNotesLayout from "./_layouts/recent-notes";
+import RecentProjectsLayout from "./_layouts/recent-projects";
+import SubscribeLayout from "./_layouts/subscribe";
 
 export default function Home() {
-  const { data: session } = useSession();
+  const notes = getNotes();
+  const projects = getProjects();
 
-  if (session) {
-    return (
-      <>
-        <Image
-          src={session.user?.image as string}
-          alt=""
-          width={64}
-          height={64}
-        />
-        {session.user?.name}
-        <br />
-        <button onClick={() => signOut()}>Sign out</button>
-      </>
-    );
-  }
   return (
     <>
-      Not signed in <br />
-      <button onClick={() => signIn()}>Sign in</button>
+      <HeroHeaderLayout />
+      <RecentNotesLayout notes={notes} />
+      <RecentProjectsLayout projects={projects} />
+      <SubscribeLayout />
     </>
   );
-  // return <main></main>;
 }
