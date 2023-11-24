@@ -5,6 +5,7 @@ import { Comfortaa } from "next/font/google";
 import HeaderLayout from "./_layouts/header";
 import Providers from "./providers";
 import FooterLayout from "./_layouts/footer";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const comfortaa = Comfortaa({ subsets: ["latin"] });
 
@@ -29,6 +30,7 @@ export default function RootLayout({
           <main>{children}</main>
           <FooterLayout />
         </Providers>
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID as string} />
       </body>
     </html>
   );
