@@ -1,0 +1,9 @@
+{
+  "plugins": ["prettier-plugin-jsdoc", "prettier-plugin-tailwindcss"],
+  "semi": true,
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "trailingComma": "es5",
+  "printWidth": 80,
+  "tailwindFunctions": ["cn"]
+}
